@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Ejercicio 13 con Javascript
+        </title>
+    </head>
+    <body>
+            <h1>
+                Objeto Date 02
+            </h1>
+            <script language="Javascript">
+                fecha = new Date();
+                fecha.setTime(0);
+                document.write("<p> <h2>Fecha Inicial</h2>"+ fecha.getDate() + " / " + parseInt(fecha.getMonth()+1) + " / " + fecha.getFullYear() + "</p>");
+
+                fechaActual = new Date();
+                document.write("<p> <h2>Fecha Actual</h2>"+ fechaActual.getDate() + " / " + parseInt(fechaActual.getMonth()+1) + " / " + fechaActual.getFullYear() + "</p>");
+            </script>
+    </body>
+</html>

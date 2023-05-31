@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Ejercicio 14 con Javascript
+        </title>
+    </head>
+    <body>
+            <h1>
+                Verificación de Correo Electrónico
+            </h1>
+            <script language="Javascript">
+                if(verificaCorreo("sdjfasjl3d0@gmail.com"))
+                {
+                    alert("Dirección Correcta");
+                }
+                else
+                {
+                    alert("Dirección Incorrecta");
+                }
+
+                function verificaCorreo(cadena)
+                {
+                    marca = 0;
+                    for(i = 0; i < cadena.length; i++)
+                    {
+                        if(cadena.charAt(i) == "@")
+                        {
+                            marca = 1;
+                            break;
+                        }
+                        if(i == cadena.length)
+                        {
+                            return false;
+                        }
+                    }
+                    if(marca)
+                    {
+                        for(n= i+1; n<cadena.length; n++)
+                        {
+                            if(cadena.charAt(n)==".")
+                            {
+                                return true;
+                            }
+                        }
+                        return false;
+                    }
+                }
+            </script>
+    </body>
+</html>

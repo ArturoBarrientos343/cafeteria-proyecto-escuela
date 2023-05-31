@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Ejercicio 10 con Javascript
+        </title>
+    </head>
+    <body>
+            <h1>
+                Propiedades de los objetos
+            </h1>
+        <script language="Javascript">
+            function MostrarDatos()
+            {
+                document.write("<p><b>Nombre:</b> " + this.nombre + "</p>");
+                document.write("<p><b>Apellido:</b> " + this.apellido + "</p>");
+                document.write("<p><b>Teléfono:</b> " + this.telefono + "</p>");
+                document.write("<p><b>Correo Electrónico:</b> " + this.correo + "</p>");
+            }
+
+            function Amigo(nombre, apellido, telefono, correo)
+            {
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.telefono = telefono;
+                this.correo = correo;
+                this.datos = MostrarDatos;
+            }
+
+            Persona = new Amigo ("Nombre", "Apellido", "5545353517", "persona@hotmail.com");
+            
+            Persona.datos(); 
+        </script>
+    </body>
+</html>
